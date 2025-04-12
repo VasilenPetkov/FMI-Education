@@ -78,6 +78,7 @@ void User::readFromStream(std::istream& is)
 {
 	size_t size = 0;
 	is >> size;
+	delete[] username;
 	username = new char[size + 1];
 	is >> username;
 	is >> license;
